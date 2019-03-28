@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RustGear</string>
+    <string-array name="head">
+        <item>test1,attrs</item>
+        <item>test2,attrs</item>
+    </string-array>
+</resources>
