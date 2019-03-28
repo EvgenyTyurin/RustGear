@@ -1,47 +1,84 @@
 package com.tyurinevgeny.rustgear;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 /**
- * Window with character gear
+ * Rust Gear Assistant: Main window with character gear
+ * 2019 Evgeny Tyurin
  */
 
 public class MainActivity extends AppCompatActivity {
-    private static final int REQUEST_CODE_ITEM = 1;
+    private static final int REQUEST_CODE_HEAD = 1;
 
     /** GUI controls */
     private Button headButton;
+    private ImageView headImage;
 
     /** Window init */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        GameData.init(this);
         // GUI controls init
         headButton = findViewById(R.id.buttonHead);
         headButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showItemsList(R.array.head);
+                showItemsList(R.array.head, headButton.getText().toString());
             }
         });
+        headImage = findViewById(R.id.imageHead);
     }
 
     /** Run window with list of items */
-    private void showItemsList(int listId) {
+     void showItemsList(int listId, String equipped) {
         Intent intent = ItemsListActivity.getIntent(MainActivity.this,
                 "", listId);
-        startActivityForResult(intent, REQUEST_CODE_ITEM);
+        int requestCode = 0;
+        switch (listId) {
+            case R.array.head:
+                requestCode = REQUEST_CODE_HEAD;
+                break;
+        }
+        if (requestCode > 0)
+            startActivityForResult(intent, requestCode);
     }
 
-    /** User returns from another window */
+    /** On returning from gear list window */
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    protected void onActivityResult (int requestCode,
+                                     int resultCode,
+                                     Intent data) {
+        if (resultCode != Activity.RESULT_OK) {
+            return;
+        }
+        // Setting new equipped gear to slot
+        String item = ItemsListActivity.getListItemSelected(data);
+        switch (requestCode) {
+            case REQUEST_CODE_HEAD:
+                PrefsWork.saveSlot("head", item, this);
+                drawHead();
+                break;
+        }
     }
+
+    /** Redraw slot */
+    private void drawSlot(String slot, Button button, ImageView imageView) {
+        String gear = PrefsWork.readSlot(slot, this);
+        button.setText(gear);
+        imageView.setImageDrawable(GameData.getItemImage(gear));
+    }
+
+    /** Redraw head slot */
+    private void drawHead() {
+        drawSlot("head", headButton, headImage);
+    }
+
 }

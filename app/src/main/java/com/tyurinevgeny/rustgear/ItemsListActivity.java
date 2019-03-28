@@ -1,10 +1,13 @@
 package com.tyurinevgeny.rustgear;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -14,23 +17,38 @@ import android.widget.ListView;
  */
 
 public class ItemsListActivity extends ListActivity {
-    public static final String EXTRA_LIST_ID = "rust.list_id";
+    private static final String EXTRA_LIST_ID = "rust.list_id";
+    private static final String EXTRA_SELECTED = "rust.selected";
+    private static final int REQUEST_CODE_ITEM = 1;
+    String selected;
 
     /** Window init */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itemslist);
+
         // Get items from xml file to ListView
         String[] items =
                 getResources().getStringArray(getIntent().
                         getIntExtra(EXTRA_LIST_ID, R.array.head));
         for (int idx = 0; idx < items.length; idx++ )
             items[idx] = items[idx].split(",")[0];
-        ListAdapter arrayAdapter = new ArrayAdapter(this,
+        final ListAdapter arrayAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, items);
         ListView listItems = getListView();
         listItems.setAdapter(arrayAdapter);
+
+        // Show item info when item selected
+        listItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                selected = String.valueOf(arrayAdapter.getItem(position));
+                Intent intent = ItemInfoActivity.getIntent(ItemsListActivity.this,
+                        "", selected);
+                startActivityForResult(intent, REQUEST_CODE_ITEM);
+            }
+        });
     }
 
     /** Another window must set input parameters before launch this window */
@@ -40,5 +58,29 @@ public class ItemsListActivity extends ListActivity {
         // todo put extras
         intent.putExtra(EXTRA_LIST_ID, listId);
         return intent;
+    }
+
+    /** On returning from item window */
+    @Override
+    protected void onActivityResult (int requestCode,
+                                     int resultCode,
+                                     Intent data) {
+        if (resultCode != Activity.RESULT_OK) {
+            return;
+        }
+        switch (requestCode) {
+            case REQUEST_CODE_ITEM:
+                // Inform main window that user equip new item
+                Intent intent = new Intent();
+                intent.putExtra(EXTRA_SELECTED, selected);
+                setResult(RESULT_OK, intent);
+                finish();
+                break;
+        }
+    }
+
+    /** Gets clicked item from intent */
+    public static String getListItemSelected(Intent intent) {
+        return intent.getStringExtra(EXTRA_SELECTED);
     }
 }
