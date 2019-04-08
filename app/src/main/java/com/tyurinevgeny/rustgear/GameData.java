@@ -3,27 +3,53 @@ package com.tyurinevgeny.rustgear;
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+
+/**
+ * Items info, images
+ */
 
 class GameData {
-    private static HashMap<String, String> itemImages = new HashMap<>();
     private static Activity activity;
+    private static ArrayList<ClothItem> items = new ArrayList<>();
 
     /** Load data from XML */
     static void init(Activity activityIn) {
+        if (!items.isEmpty())
+            return;
         activity = activityIn;
-        initArray(R.array.head);
+        String[] itemsArray = activity.getResources().getStringArray(R.array.items);
+        for (String itemStr : itemsArray) {
+            String[] attrs = itemStr.split(",");
+            if (attrs.length > 9)
+                items.add(new ClothItem(attrs[0], attrs[1], attrs[2], attrs[3], attrs[4],
+                        attrs[5], attrs[6], attrs[7], attrs[8], attrs[9]));
+        }
+        // initArray(R.array.items);
     }
 
-    private static void initArray(int arrayId) {
-        String[] items = activity.getResources().getStringArray(R.array.head);
-        for (String headItem : items)
-            itemImages.put(headItem.split(",")[0], headItem.split(",")[1]);
+    static ArrayList<String> getSlotItems(String slot) {
+        ArrayList<String> slotItems = new ArrayList<>();
+        for (ClothItem item : items)
+            if (item.slot.equals(slot))
+                slotItems.add(item.name);
+        return slotItems;
+    }
+
+    static ClothItem getItem(String name) {
+        for (ClothItem item : items)
+            if (item.name.equals(name))
+                return item;
+        return null;
     }
 
     /** Find image file by item name*/
-    static Drawable getItemImage(String item) {
-        return getImgByName(itemImages.get(item));
+    static Drawable getItemImage(String itemName) {
+        ClothItem item = getItem(itemName);
+        if (item != null)
+            return getImgByName(item.image);
+        else
+            return getImgByName("");
     }
 
     /** Returns image drawable object by image name */

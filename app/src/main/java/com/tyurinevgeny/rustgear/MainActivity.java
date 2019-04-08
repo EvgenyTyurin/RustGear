@@ -15,6 +15,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_HEAD = 1;
+    public static final String SLOT_HEAD = "head";
 
     /** GUI controls */
     private Button headButton;
@@ -31,19 +32,20 @@ public class MainActivity extends AppCompatActivity {
         headButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showItemsList(R.array.head, headButton.getText().toString());
+                showItemsList(SLOT_HEAD, headButton.getText().toString());
             }
         });
         headImage = findViewById(R.id.imageHead);
+        drawHead();
     }
 
     /** Run window with list of items */
-     void showItemsList(int listId, String equipped) {
+     void showItemsList(String slot, String equipped) {
         Intent intent = ItemsListActivity.getIntent(MainActivity.this,
-                "", listId);
+                "", slot);
         int requestCode = 0;
-        switch (listId) {
-            case R.array.head:
+        switch (slot) {
+            case SLOT_HEAD:
                 requestCode = REQUEST_CODE_HEAD;
                 break;
         }
@@ -63,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         String item = ItemsListActivity.getListItemSelected(data);
         switch (requestCode) {
             case REQUEST_CODE_HEAD:
-                PrefsWork.saveSlot("head", item, this);
+                PrefsWork.saveSlot(SLOT_HEAD, item, this);
                 drawHead();
                 break;
         }
@@ -72,13 +74,16 @@ public class MainActivity extends AppCompatActivity {
     /** Redraw slot */
     private void drawSlot(String slot, Button button, ImageView imageView) {
         String gear = PrefsWork.readSlot(slot, this);
-        button.setText(gear);
+        if (!gear.equals(""))
+            button.setText(gear);
+        else
+            button.setText(slot);
         imageView.setImageDrawable(GameData.getItemImage(gear));
     }
 
     /** Redraw head slot */
     private void drawHead() {
-        drawSlot("head", headButton, headImage);
+        drawSlot(SLOT_HEAD, headButton, headImage);
     }
 
 }

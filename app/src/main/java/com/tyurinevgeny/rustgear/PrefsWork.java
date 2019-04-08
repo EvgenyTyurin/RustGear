@@ -9,9 +9,13 @@ import android.content.SharedPreferences;
  */
 
 public class PrefsWork {
+
+    public static final String PREFS_NAME = "prefs";
+
     /** Save gear in slot */
     static void saveSlot(String slot, String gear, Activity activity) {
-        SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = activity.getSharedPreferences(PREFS_NAME,
+                Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString(slot, gear);
         editor.apply();
@@ -19,7 +23,8 @@ public class PrefsWork {
 
     /** Read gear in slot */
     static String readSlot(String slot, Activity activity) {
-        SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = activity.getSharedPreferences(PREFS_NAME,
+                Context.MODE_PRIVATE);
         return sharedPref.getString(slot, "");
     }
 }

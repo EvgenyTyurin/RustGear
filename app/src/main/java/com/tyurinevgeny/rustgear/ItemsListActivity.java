@@ -17,7 +17,7 @@ import android.widget.ListView;
  */
 
 public class ItemsListActivity extends ListActivity {
-    private static final String EXTRA_LIST_ID = "rust.list_id";
+    private static final String EXTRA_SLOT = "rust.slot";
     private static final String EXTRA_SELECTED = "rust.selected";
     private static final int REQUEST_CODE_ITEM = 1;
     String selected;
@@ -28,14 +28,10 @@ public class ItemsListActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itemslist);
 
-        // Get items from xml file to ListView
-        String[] items =
-                getResources().getStringArray(getIntent().
-                        getIntExtra(EXTRA_LIST_ID, R.array.head));
-        for (int idx = 0; idx < items.length; idx++ )
-            items[idx] = items[idx].split(",")[0];
+        // Init listview with game data
         final ListAdapter arrayAdapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, items);
+                android.R.layout.simple_list_item_1,
+                GameData.getSlotItems(getIntent().getStringExtra(EXTRA_SLOT)));
         ListView listItems = getListView();
         listItems.setAdapter(arrayAdapter);
 
@@ -53,10 +49,10 @@ public class ItemsListActivity extends ListActivity {
 
     /** Another window must set input parameters before launch this window */
     public static Intent getIntent(Context context, String equipped,
-                                   int listId) {
+                                   String slot) {
         Intent intent = new Intent(context, ItemsListActivity.class);
         // todo put extras
-        intent.putExtra(EXTRA_LIST_ID, listId);
+        intent.putExtra(EXTRA_SLOT, slot);
         return intent;
     }
 

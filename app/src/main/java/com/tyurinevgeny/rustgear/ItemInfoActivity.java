@@ -1,11 +1,13 @@
 package com.tyurinevgeny.rustgear;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -21,11 +23,29 @@ public class ItemInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_info);
 
-        // GUI init
         Intent intent = getIntent();
-        String selectedItem = intent.getStringExtra(EXTRA_SELECTED);
+        String selectedItemName = intent.getStringExtra(EXTRA_SELECTED);
+        // Selected item info
+        ImageView imageSelected = findViewById(R.id.selectedImage);
+        imageSelected.setImageDrawable(GameData.getItemImage(selectedItemName));
         TextView viewSelectedName = findViewById(R.id.selectedName);
-        viewSelectedName.setText(selectedItem);
+        viewSelectedName.setText(selectedItemName);
+        ClothItem selectedItem = GameData.getItem(selectedItemName);
+        TextView textSelectedCold = findViewById(R.id.selectedCold);
+        textSelectedCold.setText(selectedItem.cold);
+        TextView textSelectedRad = findViewById(R.id.selectedRad);
+        textSelectedRad.setText(selectedItem.radiation);
+        TextView textSelectedExpl = findViewById(R.id.selectedExplosion);
+        textSelectedExpl.setText(selectedItem.explosion);
+        TextView textSelectedStab = findViewById(R.id.selectedStab);
+        textSelectedStab.setText(selectedItem.stab);
+        TextView textSelectedBullet = findViewById(R.id.selectedBullet);
+        textSelectedBullet.setText(selectedItem.bullet);
+        TextView textSelectedBite = findViewById(R.id.selectedBite);
+        textSelectedBite.setText(selectedItem.bite);
+        TextView textSelectedIngr = findViewById(R.id.selectedIngredients);
+        textSelectedIngr.setText(selectedItem.ingridients);
+        // Equip button
         Button buttonEquip = findViewById(R.id.buttonEquip);
         if (selectedItem.equals("")) {
             buttonEquip.setEnabled(false);
