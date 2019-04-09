@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:paddingTop="8dp">
+    android:paddingTop="8dp"
+    android:background="@drawable/back">
 
     <android.support.v7.widget.GridLayout
         android:layout_width="wrap_content"
@@ -13,38 +14,86 @@
 
         <ImageView
             android:id="@+id/imageHead"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            app:srcCompat="@android:drawable/list_selector_background" />
 
         <Button
             android:id="@+id/buttonHead"
             android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
+            android:background="?attr/colorControlHighlight"
+            android:textColor="@android:color/white"
             android:text="HEAD" />
 
         <ImageView
             android:id="@+id/imageFace"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@android:drawable/list_selector_background" />
 
         <Button
             android:id="@+id/buttonFace"
             android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
+            android:background="?attr/colorControlHighlight"
+            android:textColor="@android:color/white"
             android:text="FACE" />
 
         <ImageView
             android:id="@+id/imageChest"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@android:drawable/list_selector_background" />
 
         <Button
             android:id="@+id/buttonChest"
             android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:text="FACE" />
+            android:layout_height="80dp"
+            android:background="?attr/colorControlHighlight"
+            android:textColor="@android:color/white"
+            android:text="CHEST" />
+
+        <ImageView
+            android:id="@+id/imageGloves"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@android:drawable/list_selector_background" />
+
+        <Button
+            android:id="@+id/buttonGloves"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:background="?attr/colorControlHighlight"
+            android:textColor="@android:color/white"
+            android:text="GLOVES" />
+
+        <ImageView
+            android:id="@+id/imageLegs"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@android:drawable/list_selector_background" />
+
+        <Button
+            android:id="@+id/buttonLegs"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:background="?attr/colorControlHighlight"
+            android:textColor="@android:color/white"
+            android:text="LEGS" />
+
+        <ImageView
+            android:id="@+id/imageFeet"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@android:drawable/list_selector_background" />
+
+        <Button
+            android:id="@+id/buttonFeet"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:background="?attr/colorControlHighlight"
+            android:textColor="@android:color/white"
+            android:text="FEET" />
     </android.support.v7.widget.GridLayout>
 </LinearLayout>

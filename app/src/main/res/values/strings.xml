@@ -15,5 +15,31 @@
         <item>Wolf Headdress,wolf_headdress,head,+6%,+4%,+13%,+60%,+30%,+10%,Cloth x 10 Wolf Scull x 1</item>
         <item>Wood Armor Helmet,wood_armor_helmet,head,+7%,+2%,+0%,+25%,+15%,+3%,Cloth x 15 Wood x 200</item>
         <item>Bandana Mask,bandana_mask,face,+10%,+3%,+0%,+10%,+5%,+3%,No craft</item>
+        <item>Burlap Shirt,burlap_shirt,chest,+7%,+2%,+0%,+10%,+10%,+3%,Cloth x 20</item>
+        <item>Heavy Plate Jacket,heavy_plate_jacket,chest,-17%,+7%,+12%,+70%,+75%,+12%,Sheet Metal x 3 High Quality Metal x 8 Rope x 3</item>
+        <item>Hide Halterneck,hide_halterneck,chest,+7%,+2%,+0%,+10%,+10%,+3%,Cloth x 20</item>
+        <item>Hide Poncho,hide_poncho,chest,+8%,+5%,+0%,+10%,+10%,+5%,Cloth x 50</item>
+        <item>Hide Vest,hide_vest,chest,+5%,+2%,+0%,+10%,+10%,+8%,Cloth x 50</item>
+        <item>Hoodie,hoodie,chest,+8%,+5%,+0%,+15%,+15%,+6%,Cloth x 80 Sewing Kit x 1</item>
+        <item>Jacket,jacket,chest,+10%,+5%,+0%,+20%,+15%,+7%,Cloth x 50 Sewing Kit x 2</item>
+        <item>Longsleeve T-Shirt,longsleeve_t_shirt,chest,+4%,+3%,+0%,+10%,+10%,+4%,Cloth x 35</item>
+        <item>Metal Chest Plate,metal_chest_plate,chest,-8%,+0%,+0%,+20%,+25%,+3%,Leather x 50 High Quality Metal x 25 Sewing Kit x 8</item>
+        <item>Shirt,shirt,chest,+5%,+2%,+0%,+10%,+10%,+8%,Cloth x 50</item>
+        <item>Snow Jacket,snow_jacket,chest,+17%,+20%,+0%,+20%,+20%,+5%,Cloth x 60 Sewing Kit x 1</item>
+        <item>T-Shirt,t_shirt,chest,+4%,+3%,+0%,+10%,+10%,+4%,Cloth x 30</item>
+        <item>Tank Top,tank_top,chest,+5%,+2%,+0%,+5%,+5%,+3%,Cloth x 30</item>
+        <item>Burlap Trousers,burlap_trousers,legs,+7%,+2%,+0%,+10%,+10%,+3%,Cloth x 20</item>
+        <item>Heavy Plate Pants,heavy_plate_pants,legs,-17%,+7%,+12%,+70%,+75%,+12%,Sheet Metal x 2 High Quality Metal x 4 Rope x 2</item>
+        <item>Hide Pants,hide_pants,legs,+4%,+2%,+0%,+10%,+10%,+8%,Cloth x 45</item>
+        <item>Hide Skirt,hide_skirt,legs,+7%,+2%,+0%,+10%,+10%,+3%,Cloth x 20</item>
+        <item>Pants,pants,legs,+8%,+5%,+0%,+15%,+15%,+3%,Cloth x 80 Sewing Kit x 1</item>
+        <item>Road Sign Kilt,road_sign_kilt,legs,-8%,+0%,+0%,+25%,+20%,+10%,Leather x 20 Road Signs x 1 Sewing Kit x 2</item>
+        <item>Shorts,shorts,legs,+7%,+2%,+0%,+10%,+10%,+3%,Cloth x 30</item>
+        <item>Wood Armor Pants,wood_armor_pants,legs,+0%,+5%,+5%,+40%,+10%,+5%,Wood x 200 Rope x 1</item>
+        <item>Boots,boots,feet,+8%,+3%,+0%,+10%,+10%,+3%,Leather x 20 Road Signs x 1 Sewing Kit x 1 Metal Fragments x 15</item>
+        <item>Burlap Shoes,burlap_shoes,feet,+3%,+2%,+0%,+5%,+5%,+2%,Cloth x 10</item>
+        <item>Hide Boots,hide_boots,feet,+5%,+2%,+0%,+5%,+5%,+3%,Leather x 10</item>
+        <item>Frog Boots,frog_boots,feet,+8%,+5%,+0%,+0%,+0%,+0%,Tarp x 1</item>
+        <item>Leather Gloves,leather_gloves,gloves,+3%,+2%,+0%,+5%,+5%,+2%,Leather x 20 Sewing Kit x 1</item>
     </string-array>
 </resources>

@@ -18,9 +18,15 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_HEAD = 1;
     private static final int REQUEST_CODE_FACE = 2;
     private static final int REQUEST_CODE_CHEST = 3;
+    private static final int REQUEST_CODE_LEGS = 4;
+    private static final int REQUEST_CODE_FEET = 5;
+    private static final int REQUEST_CODE_GLOVES = 6;
     public static final String SLOT_HEAD = "head";
     public static final String SLOT_FACE = "face";
     public static final String SLOT_CHEST = "chest";
+    public static final String SLOT_LEGS = "legs";
+    public static final String SLOT_FEET = "feet";
+    public static final String SLOT_GLOVES = "gloves";
 
     /** GUI controls */
     private Button headButton;
@@ -29,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
     private ImageView faceImage;
     private Button chestButton;
     private ImageView chestImage;
+    private Button legsButton;
+    private ImageView legsImage;
+    private Button feetButton;
+    private ImageView feetImage;
+    private Button glovesButton;
+    private ImageView glovesImage;
 
     /** Window init */
     @Override
@@ -55,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         faceImage = findViewById(R.id.imageFace);
-        drawHead();
+        drawFace();
         // Chest slot init
         chestButton = findViewById(R.id.buttonChest);
         chestButton.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +78,36 @@ public class MainActivity extends AppCompatActivity {
         });
         chestImage = findViewById(R.id.imageChest);
         drawChest();
+        // Legs slot init
+        legsButton = findViewById(R.id.buttonLegs);
+        legsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showItemsList(SLOT_LEGS, legsButton.getText().toString());
+            }
+        });
+        legsImage = findViewById(R.id.imageLegs);
+        drawLegs();
+        // Feet slot init
+        feetButton = findViewById(R.id.buttonFeet);
+        feetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showItemsList(SLOT_FEET, feetButton.getText().toString());
+            }
+        });
+        feetImage = findViewById(R.id.imageFeet);
+        drawFeet();
+        // Gloves slot init
+        glovesButton = findViewById(R.id.buttonGloves);
+        glovesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showItemsList(SLOT_GLOVES, glovesButton.getText().toString());
+            }
+        });
+        glovesImage = findViewById(R.id.imageGloves);
+        drawGloves();
     }
 
     /** Run window with list of items */
@@ -82,6 +124,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case SLOT_CHEST:
                 requestCode = REQUEST_CODE_CHEST;
+                break;
+            case SLOT_LEGS:
+                requestCode = REQUEST_CODE_LEGS;
+                break;
+            case SLOT_FEET:
+                requestCode = REQUEST_CODE_FEET;
+                break;
+            case SLOT_GLOVES:
+                requestCode = REQUEST_CODE_GLOVES;
                 break;
         }
         if (requestCode > 0)
@@ -111,6 +162,18 @@ public class MainActivity extends AppCompatActivity {
                 PrefsWork.saveSlot(SLOT_CHEST, item, this);
                 drawChest();
                 break;
+            case REQUEST_CODE_LEGS:
+                PrefsWork.saveSlot(SLOT_LEGS, item, this);
+                drawLegs();
+                break;
+            case REQUEST_CODE_FEET:
+                PrefsWork.saveSlot(SLOT_FEET, item, this);
+                drawFeet();
+                break;
+            case REQUEST_CODE_GLOVES:
+                PrefsWork.saveSlot(SLOT_GLOVES, item, this);
+                drawGloves();
+                break;
         }
     }
 
@@ -137,5 +200,20 @@ public class MainActivity extends AppCompatActivity {
     /** Redraw chest slot */
     private void drawChest() {
         drawSlot(SLOT_CHEST, chestButton, chestImage);
+    }
+
+    /** Redraw legs slot */
+    private void drawLegs() {
+        drawSlot(SLOT_LEGS, legsButton, legsImage);
+    }
+
+    /** Redraw feet slot */
+    private void drawFeet() {
+        drawSlot(SLOT_FEET, feetButton, feetImage);
+    }
+
+    /** Redraw gloves slot */
+    private void drawGloves() {
+        drawSlot(SLOT_GLOVES, glovesButton, glovesImage);
     }
 }

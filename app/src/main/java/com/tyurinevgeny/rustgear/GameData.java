@@ -25,7 +25,6 @@ class GameData {
                 items.add(new ClothItem(attrs[0], attrs[1], attrs[2], attrs[3], attrs[4],
                         attrs[5], attrs[6], attrs[7], attrs[8], attrs[9]));
         }
-        // initArray(R.array.items);
     }
 
     static ArrayList<String> getSlotItems(String slot) {
@@ -43,7 +42,7 @@ class GameData {
         return null;
     }
 
-    /** Find image file by item name*/
+    /** Find image file by item name */
     static Drawable getItemImage(String itemName) {
         ClothItem item = getItem(itemName);
         if (item != null)

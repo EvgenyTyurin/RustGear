@@ -30,7 +30,7 @@ public class ItemsListActivity extends ListActivity {
 
         // Init listview with game data
         final ListAdapter arrayAdapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1,
+                R.layout.list_item,
                 GameData.getSlotItems(getIntent().getStringExtra(EXTRA_SLOT)));
         ListView listItems = getListView();
         listItems.setAdapter(arrayAdapter);

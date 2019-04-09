@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/heavy_plate_helmet"
+        android:icon="@drawable/wolf_headdress"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/heavy_plate_helmet"
+        android:roundIcon="@drawable/wolf_headdress"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
