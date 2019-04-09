@@ -22,5 +22,29 @@
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:text="HEAD" />
+
+        <ImageView
+            android:id="@+id/imageFace"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <Button
+            android:id="@+id/buttonFace"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:text="FACE" />
+
+        <ImageView
+            android:id="@+id/imageChest"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <Button
+            android:id="@+id/buttonChest"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:text="FACE" />
     </android.support.v7.widget.GridLayout>
 </LinearLayout>

@@ -5,6 +5,7 @@
         <item>Bone Helmet,bone_helmet,head,+0%,+4%,+7%,+40%,+25%,+13%,Cloth x 15 Bone Fragments x 50</item>
         <item>Bucket Helmet,bucket_helmet,head,+6%,+4%,+8%,+50%,+20%,+8%,Metal Fragments x 35</item>
         <item>Burlap Headwrap,burlap_headwrap,head,+7%,+2%,+0%,+15%,+15%,+3%,Cloth x 10</item>
+        <item>Candle Hat,candle_hat,head,+7%,+1%,+0%,+10%,+10%,+3%,Cloth x 15 Low Grade Fuel x 1</item>
         <item>Coffee Can Helmet,coffee_can_helmet,head,+0%,+5%,+8%,+50%,+35%,+8%,Metal Fragments x 60 Cloth x 15 Sewing Kit x 1</item>
         <item>Heavy Plate Helmet,heavy_plate_helmet,head,-17%,+7%,+8%,+80%,+90%,+13%,SheetMetal x 2 High Quality Metal x 5</item>
         <item>Improvised Balaclava,improvised_balaclava,head,+13%,+3%,+3%,+15%,+15%,+3%,Cloth x 15</item>
@@ -13,5 +14,6 @@
         <item>Riot Helmet,riot_helmet,head,+6%,+5%,+8%,+80%,+25%,+13%,Cloth x 10 High Metal Fragments x 50</item>
         <item>Wolf Headdress,wolf_headdress,head,+6%,+4%,+13%,+60%,+30%,+10%,Cloth x 10 Wolf Scull x 1</item>
         <item>Wood Armor Helmet,wood_armor_helmet,head,+7%,+2%,+0%,+25%,+15%,+3%,Cloth x 15 Wood x 200</item>
+        <item>Bandana Mask,bandana_mask,face,+10%,+3%,+0%,+10%,+5%,+3%,No craft</item>
     </string-array>
 </resources>

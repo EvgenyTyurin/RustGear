@@ -14,12 +14,21 @@ import android.widget.ImageView;
  */
 
 public class MainActivity extends AppCompatActivity {
+    /** Gear slots */
     private static final int REQUEST_CODE_HEAD = 1;
+    private static final int REQUEST_CODE_FACE = 2;
+    private static final int REQUEST_CODE_CHEST = 3;
     public static final String SLOT_HEAD = "head";
+    public static final String SLOT_FACE = "face";
+    public static final String SLOT_CHEST = "chest";
 
     /** GUI controls */
     private Button headButton;
     private ImageView headImage;
+    private Button faceButton;
+    private ImageView faceImage;
+    private Button chestButton;
+    private ImageView chestImage;
 
     /** Window init */
     @Override
@@ -27,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         GameData.init(this);
-        // GUI controls init
+        // Head slot init
         headButton = findViewById(R.id.buttonHead);
         headButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,16 +46,42 @@ public class MainActivity extends AppCompatActivity {
         });
         headImage = findViewById(R.id.imageHead);
         drawHead();
+        // Face slot init
+        faceButton = findViewById(R.id.buttonFace);
+        faceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showItemsList(SLOT_FACE, faceButton.getText().toString());
+            }
+        });
+        faceImage = findViewById(R.id.imageFace);
+        drawHead();
+        // Chest slot init
+        chestButton = findViewById(R.id.buttonChest);
+        chestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showItemsList(SLOT_CHEST, chestButton.getText().toString());
+            }
+        });
+        chestImage = findViewById(R.id.imageChest);
+        drawChest();
     }
 
     /** Run window with list of items */
      void showItemsList(String slot, String equipped) {
         Intent intent = ItemsListActivity.getIntent(MainActivity.this,
-                "", slot);
+                equipped, slot);
         int requestCode = 0;
         switch (slot) {
             case SLOT_HEAD:
                 requestCode = REQUEST_CODE_HEAD;
+                break;
+            case SLOT_FACE:
+                requestCode = REQUEST_CODE_FACE;
+                break;
+            case SLOT_CHEST:
+                requestCode = REQUEST_CODE_CHEST;
                 break;
         }
         if (requestCode > 0)
@@ -68,6 +103,14 @@ public class MainActivity extends AppCompatActivity {
                 PrefsWork.saveSlot(SLOT_HEAD, item, this);
                 drawHead();
                 break;
+            case REQUEST_CODE_FACE:
+                PrefsWork.saveSlot(SLOT_FACE, item, this);
+                drawFace();
+                break;
+            case REQUEST_CODE_CHEST:
+                PrefsWork.saveSlot(SLOT_CHEST, item, this);
+                drawChest();
+                break;
         }
     }
 
@@ -86,4 +129,13 @@ public class MainActivity extends AppCompatActivity {
         drawSlot(SLOT_HEAD, headButton, headImage);
     }
 
+    /** Redraw face slot */
+    private void drawFace() {
+        drawSlot(SLOT_FACE, faceButton, faceImage);
+    }
+
+    /** Redraw chest slot */
+    private void drawChest() {
+        drawSlot(SLOT_CHEST, chestButton, chestImage);
+    }
 }
