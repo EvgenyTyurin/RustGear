@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingTop="8dp"
+    android:background="@drawable/back">
+
+    <android.support.v7.widget.GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:columnCount="2">
+
+        <ImageView
+            android:id="@+id/imageWeaponPrimary"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            app:srcCompat="@android:drawable/list_selector_background" />
+
+        <Button
+            android:id="@+id/buttonWeaponPrimary"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:background="?attr/colorControlHighlight"
+            android:textColor="@android:color/white"
+            android:text="PRIMARY WEAPON" />
+
+        <ImageView
+            android:id="@+id/imageWeaponSecondary"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@android:drawable/list_selector_background" />
+
+        <Button
+            android:id="@+id/buttonWeaponSecondary"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:background="?attr/colorControlHighlight"
+            android:textColor="@android:color/white"
+            android:text="SECONDARY WEAPON" />
+
+        <ImageView
+            android:id="@+id/imageWeaponBackup"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@android:drawable/list_selector_background" />
+
+        <Button
+            android:id="@+id/buttonWeaponBackup"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:background="?attr/colorControlHighlight"
+            android:textColor="@android:color/white"
+            android:text="BACKUP WEAPON" />
+
+    </android.support.v7.widget.GridLayout>
+</LinearLayout>

@@ -1,6 +1,5 @@
 package com.tyurinevgeny.rustgear;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -32,19 +31,23 @@ public class ItemInfoActivity extends AppCompatActivity {
         viewSelectedName.setText(selectedItemName);
         ClothItem selectedItem = GameData.getItem(selectedItemName);
         TextView textSelectedCold = findViewById(R.id.selectedCold);
-        textSelectedCold.setText(selectedItem.cold);
+        if (selectedItem.attrs.length > 0)
+            textSelectedCold.setText(selectedItem.attrs[0]);
         TextView textSelectedRad = findViewById(R.id.selectedRad);
-        textSelectedRad.setText(selectedItem.radiation);
+        if (selectedItem.attrs.length > 1)
+            textSelectedRad.setText(selectedItem.attrs[1]);
         TextView textSelectedExpl = findViewById(R.id.selectedExplosion);
-        textSelectedExpl.setText(selectedItem.explosion);
+        if (selectedItem.attrs.length > 2)
+            textSelectedExpl.setText(selectedItem.attrs[2]);
         TextView textSelectedStab = findViewById(R.id.selectedStab);
-        textSelectedStab.setText(selectedItem.stab);
+        if (selectedItem.attrs.length > 3)
+            textSelectedStab.setText(selectedItem.attrs[3]);
         TextView textSelectedBullet = findViewById(R.id.selectedBullet);
-        textSelectedBullet.setText(selectedItem.bullet);
+        if (selectedItem.attrs.length > 4)
+            textSelectedBullet.setText(selectedItem.attrs[4]);
         TextView textSelectedBite = findViewById(R.id.selectedBite);
-        textSelectedBite.setText(selectedItem.bite);
-        TextView textSelectedIngr = findViewById(R.id.selectedIngredients);
-        textSelectedIngr.setText(selectedItem.ingridients);
+        if (selectedItem.attrs.length > 5)
+            textSelectedBite.setText(selectedItem.attrs[5]);
         // Equip button
         Button buttonEquip = findViewById(R.id.buttonEquip);
         if (selectedItem.equals("")) {

@@ -14,11 +14,13 @@ public class PrefsWork {
 
     /** Save gear in slot */
     static void saveSlot(String slot, String gear, Activity activity) {
-        SharedPreferences sharedPref = activity.getSharedPreferences(PREFS_NAME,
-                Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString(slot, gear);
-        editor.apply();
+        if (gear != null) {
+            SharedPreferences sharedPref = activity.getSharedPreferences(PREFS_NAME,
+                    Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putString(slot, gear);
+            editor.apply();
+        }
     }
 
     /** Read gear in slot */
@@ -27,4 +29,5 @@ public class PrefsWork {
                 Context.MODE_PRIVATE);
         return sharedPref.getString(slot, "");
     }
+
 }

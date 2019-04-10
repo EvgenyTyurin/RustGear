@@ -9,7 +9,9 @@ public class ClothItem {
             cold, radiation, explosion,
             stab, bullet, bite,
             ingridients;
+    String[] attrs;
 
+    /*
     public ClothItem(String name, String image, String slot,
                      String cold, String radiation, String explosion,
                      String stab, String bullet, String bite,
@@ -24,5 +26,14 @@ public class ClothItem {
         this.bullet = bullet;
         this.bite = bite;
         this.ingridients = ingridients;
+    }
+    */
+
+    public ClothItem(String name, String image, String slot, String[] attrs) {
+        this.name = name;
+        this.name = name;
+        this.image = image;
+        this.slot = slot;
+        this.attrs = attrs;
     }
 }

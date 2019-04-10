@@ -22,42 +22,35 @@
     <TextView
         android:id="@+id/selectedCold"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/cold" />
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/selectedRad"
-        android:drawableLeft="@drawable/radiation_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/selectedExplosion"
-        android:drawableLeft="@drawable/explosion_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/selectedStab"
-        android:drawableLeft="@drawable/stab_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/selectedBullet"
-        android:drawableLeft="@drawable/bullet_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/selectedBite"
-        android:drawableLeft="@drawable/bite_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/selectedIngredients"
-        android:drawableLeft="@drawable/cloth_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="invisible"/>

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.graphics.drawable.Drawable;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Items info, images
@@ -21,9 +22,9 @@ class GameData {
         String[] itemsArray = activity.getResources().getStringArray(R.array.items);
         for (String itemStr : itemsArray) {
             String[] attrs = itemStr.split(",");
-            if (attrs.length > 9)
-                items.add(new ClothItem(attrs[0], attrs[1], attrs[2], attrs[3], attrs[4],
-                        attrs[5], attrs[6], attrs[7], attrs[8], attrs[9]));
+            if (attrs.length > 2)
+                items.add(new ClothItem(attrs[0], attrs[1], attrs[2],
+                        Arrays.copyOfRange(attrs, 3, attrs.length - 1)));
         }
     }
 

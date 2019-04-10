@@ -2,8 +2,12 @@ package com.tyurinevgeny.rustgear;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -110,6 +114,40 @@ public class MainActivity extends AppCompatActivity {
         drawGloves();
     }
 
+    /** Add menu to window */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    /** Menu click handler */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Start geared weapons window
+            case R.id.menu_item_weapons:
+                Intent intent = new Intent(MainActivity.this, WeaponsActivity.class);
+                startActivity(intent);
+                return true;
+            // Clear all gear slots
+            case R.id.menu_die:
+                return true;
+            case R.id.menu_ads:
+                Intent intentWeb = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(getString(R.string.ads_url)));
+                startActivity(intentWeb);
+                return true;
+            case R.id.menu_news:
+                Intent intentWebNews = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(getString(R.string.news_url)));
+                startActivity(intentWebNews);
+                return true;
+            default: return super.onOptionsItemSelected(item);
+        }
+    }
+
     /** Run window with list of items */
      void showItemsList(String slot, String equipped) {
         Intent intent = ItemsListActivity.getIntent(MainActivity.this,
@@ -180,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
     /** Redraw slot */
     private void drawSlot(String slot, Button button, ImageView imageView) {
         String gear = PrefsWork.readSlot(slot, this);
-        if (!gear.equals(""))
+        if (gear != null && !gear.equals(""))
             button.setText(gear);
         else
             button.setText(slot);
