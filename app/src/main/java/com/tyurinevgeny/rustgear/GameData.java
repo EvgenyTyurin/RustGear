@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 class GameData {
     private static Activity activity;
-    private static ArrayList<ClothItem> items = new ArrayList<>();
+    private static ArrayList<RustItem> items = new ArrayList<>();
 
     /** Load data from XML */
     static void init(Activity activityIn) {
@@ -23,21 +23,21 @@ class GameData {
         for (String itemStr : itemsArray) {
             String[] attrs = itemStr.split(",");
             if (attrs.length > 2)
-                items.add(new ClothItem(attrs[0], attrs[1], attrs[2],
-                        Arrays.copyOfRange(attrs, 3, attrs.length - 1)));
+                items.add(new RustItem(attrs[0], attrs[1], attrs[2],
+                        Arrays.copyOfRange(attrs, 3, attrs.length)));
         }
     }
 
     static ArrayList<String> getSlotItems(String slot) {
         ArrayList<String> slotItems = new ArrayList<>();
-        for (ClothItem item : items)
+        for (RustItem item : items)
             if (item.slot.equals(slot))
                 slotItems.add(item.name);
         return slotItems;
     }
 
-    static ClothItem getItem(String name) {
-        for (ClothItem item : items)
+    static RustItem getItem(String name) {
+        for (RustItem item : items)
             if (item.name.equals(name))
                 return item;
         return null;
@@ -45,7 +45,7 @@ class GameData {
 
     /** Find image file by item name */
     static Drawable getItemImage(String itemName) {
-        ClothItem item = getItem(itemName);
+        RustItem item = getItem(itemName);
         if (item != null)
             return getImgByName(item.image);
         else

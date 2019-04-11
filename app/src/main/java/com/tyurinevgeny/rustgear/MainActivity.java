@@ -12,6 +12,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 /**
  * Rust Gear Assistant: Main window with character gear
  * 2019 Evgeny Tyurin
@@ -45,12 +50,19 @@ public class MainActivity extends AppCompatActivity {
     private ImageView feetImage;
     private Button glovesButton;
     private ImageView glovesImage;
+    private AdView mAdView;
 
     /** Window init */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Google ads init
+        MobileAds.initialize(this, "ca-app-pub-1997515044908390~1047954950");
+        mAdView = findViewById(R.id.adView1);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        // Load game data
         GameData.init(this);
         // Head slot init
         headButton = findViewById(R.id.buttonHead);
@@ -133,6 +145,21 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             // Clear all gear slots
             case R.id.menu_die:
+                PrefsWork.saveSlot(SLOT_HEAD, "HEAD", this);
+                drawHead();
+                PrefsWork.saveSlot(SLOT_FACE, "FACE", this);
+                drawFace();
+                PrefsWork.saveSlot(SLOT_CHEST, "CHEST", this);
+                drawChest();
+                PrefsWork.saveSlot(SLOT_LEGS, "LEGS", this);
+                drawLegs();
+                PrefsWork.saveSlot(SLOT_FEET, "FEET", this);
+                drawFeet();
+                PrefsWork.saveSlot(SLOT_GLOVES, "GLOVES", this);
+                drawGloves();
+                PrefsWork.saveSlot(WeaponsActivity.SLOT_PRIMARY_WEAPON, "PRIMARY WEAPON", this);
+                PrefsWork.saveSlot(WeaponsActivity.SLOT_SECONDARY_WEAPON, "SECONDARY WEAPON", this);
+                PrefsWork.saveSlot(WeaponsActivity.SLOT_BACKUP_WEAPON, "BACKUP WEAPON", this);
                 return true;
             case R.id.menu_ads:
                 Intent intentWeb = new Intent(Intent.ACTION_VIEW,

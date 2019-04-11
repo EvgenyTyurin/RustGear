@@ -41,37 +41,37 @@
         <item>Hide Boots,hide_boots,feet,Cold:+5%,Radiation:+2%,Explosion:+0%,Stab:+5%,Bullet:+5%,Byte:+3%,Craft</item>
         <item>Frog Boots,frog_boots,feet,Cold:+8%,Radiation:+5%,Explosion:+0%,Stab:+0%,Bullet:+0%,Byte:+0%,Craft</item>
         <item>Leather Gloves,leather_gloves,gloves,Cold:+3%,Radiation:+2%,Explosion:+0%,Stab:+5%,Bullet:+5%,Byte:+2%,Craft</item>
-        <item>Bolt Action Rifle,bolt_action_rifle,weapon,Mode:Single Fire,Head damage:150+30,Chest damage:75+15,Arms damage:50,Legs damage:45,Recoil:Severe,Range:350-500m,Capacity:4(5.56 Rifle Ammo)</item>
+        <item>Bolt Action Rifle,bolt_action_rifle,weapon,Mode:Single Fire,Head damage:150+30,Chest damage:75+15,Arms damage:50,Legs damage:45,Recoil:Severe,Range:350-500m,Mag:4(5.56 Rifle Ammo)</item>
         <item>Bone Knife,bone_knife,weapon,Mode:Melee,Head damage:35,Chest damage:17,Arms damage:17,Legs damage:15,Range:1.5m</item>
-        <item>Crossbow,crossbow,weapon,Mode:Single Fire,Head damage:102-121+34,Chest damage:60+12,Arms damage:45,Legs damage:45,Recoil:Low,Range:250m,Capacity:1(Arrow)</item>
-        <item>Custom SMG,custom_smg,weapon,Mode:Full Auto,Head damage:60,Chest damage:35,Arms damage:35,Legs damage:30,Recoil:Medium,Range:200m,Capacity:24(Pistol Bullet)</item>
-        <item>Double Barrel Shotgun,double_barrel_shotgun,weapon,Mode:Semi Auto,Head damage:210,Chest damage:180,Arms damage:180,Legs damage:75,Recoil:High,Range:Short,Capacity:2(12 Gauge)</item>
-        <item>Eoka Pistol,eoka_pistol,weapon,Mode:Single,Head damage:210,Chest damage:180,Arms damage:180,Legs damage:75,Recoil:High,Range:Short,Capacity:1(12 Gauge)</item>
+        <item>Crossbow,crossbow,weapon,Mode:Single Fire,Head damage:102-121+34,Chest damage:60+12,Arms damage:45,Legs damage:45,Recoil:Low,Range:250m,Mag:1(Arrow)</item>
+        <item>Custom SMG,custom_smg,weapon,Mode:Full Auto,Head damage:60,Chest damage:35,Arms damage:35,Legs damage:30,Recoil:Medium,Range:200m,Mag:24(Pistol Bullet)</item>
+        <item>Double Barrel Shotgun,double_barrel_shotgun,weapon,Mode:Semi Auto,Head damage:210,Chest damage:180,Arms damage:180,Legs damage:75,Recoil:High,Range:Short,Mag:2(12 Gauge)</item>
+        <item>Eoka Pistol,eoka_pistol,weapon,Mode:Single,Head damage:210,Chest damage:180,Arms damage:180,Legs damage:75,Recoil:High,Range:Short,Mag:1(12 Gauge)</item>
         <item>F1 Grenade,f1_grenade,weapon,Mode:Explosive,Chest damage:64-100</item>
-        <item>Flame Thrower,flame_thrower,weapon,Mode:Full Auto,Head damage:8,Chest damage:8,Arms damage:8,Legs damage:8,Recoil:No,Range:Short,Capacity:100(Low Grade Fuel)</item>
-        <item>Hunting Bow,hunting_bow,weapon,Mode:Single,Head damage:80+20bleed,Chest damage:50+10bleed,Arms damage:40,Legs damage:35,Recoil:Low,Range:150m,Capacity:1(Arrow)</item>
+        <item>Flame Thrower,flame_thrower,weapon,Mode:Full Auto,Head damage:8,Chest damage:8,Arms damage:8,Legs damage:8,Recoil:No,Range:Short,Mag:100(Low Grade Fuel)</item>
+        <item>Hunting Bow,hunting_bow,weapon,Mode:Single,Head damage:80+20,Chest damage:50+10,Arms damage:40,Legs damage:35,Recoil:Low,Range:150m,Mag:1(Arrow)</item>
         <item>Longsword,longsword,weapon,Mode:Melee,Head damage:150,Chest damage:75,Arms damage:45,Legs damage:36,Range:1.5m</item>
-        <item>LR-300 Assault Rifle,lr_300_assault_rifle,weapon,Mode:Full Auto,Head damage:80,Chest damage:40,Arms damage:40,Legs damage:30,Recoil:Low,Range:188m,Capacity:30(5.56 Rifle Ammo)</item>
-        <item>M249,m249,weapon,Mode:Full Auto,Head damage:130,Chest damage:65,Arms damage:55,Legs damage:37,Recoil:High,Range:Moderate,Capacity:100(5.56 Rifle Ammo)</item>
-        <item>M92 Pistol,m92_pistol,weapon,Mode:Semi Auto,Head damage:90,Chest damage:45,Arms damage:45,Legs damage:34,Recoil:Very Low,Range:90m,Capacity:15(Pistol Bullet)</item>
+        <item>LR-300 Assault Rifle,lr_300_assault_rifle,weapon,Mode:Full Auto,Head damage:80,Chest damage:40,Arms damage:40,Legs damage:30,Recoil:Low,Range:188m,Mag:30(5.56 Rifle Ammo)</item>
+        <item>M249,m249,weapon,Mode:Full Auto,Head damage:130,Chest damage:65,Arms damage:55,Legs damage:37,Recoil:High,Range:Moderate,Mag:100(5.56 Rifle Ammo)</item>
+        <item>M92 Pistol,m92_pistol,weapon,Mode:Semi Auto,Head damage:90,Chest damage:45,Arms damage:45,Legs damage:34,Recoil:Very Low,Range:90m,Mag:15(Pistol Bullet)</item>
         <item>Mace,mace,weapon,Mode:Melee,Head damage:100,Chest damage:50,Arms damage:45,Legs damage:35,Range:1.5m</item>
         <item>Machete,machete,weapon,Mode:Melee,Head damage:70,Chest damage:35,Arms damage:35,Legs damage:29,Range:1.5m</item>
-        <item>MP5A4,mp5a4,weapon,Mode:Full Auto,Head damage:70,Chest damage:35,Arms damage:35,Legs damage:29,Recoil:Medium,Range:?,Capacity:30(Pistol Bullet)</item>
-        <item>Nailgun,nailgun,weapon,Mode:Semi Auto,Head damage:36,Chest damage:18,Arms damage:12,Legs damage:8,Recoil:?,Range:Short,Capacity:16(Nailgun nails)</item>
-        <item>Pump Shotgun,pump_shotgun,weapon,Mode:Pump Action,Head damage:280,Chest damage:210,Arms damage:80,Legs damage:80,Recoil:High,Range:10m,Capacity:6(12 Gauge)</item>
-        <item>Python Revolver,python_revolver,weapon,Mode:Semi Auto,Head damage:110+22bleed,Chest damage:55+11bleed,Arms damage:55,Legs damage:45,Recoil:High,Range:?,Capacity:6(Pistol Bullet)</item>
-        <item>Rocket Launcher,rocket_launcher,weapon,Mode:Single,Chest damage:350,Recoil:High,Range:250m,Capacity:1(Rocket)</item>
-        <item>Salvaged Cleaver,salvaged_cleaver,weapon,Mode:Melee,Head damage:120,Chest damage:60+11bleed,Arms damage:55,Legs damage:50,Range:1.5m</item>
+        <item>MP5A4,mp5a4,weapon,Mode:Full Auto,Head damage:70,Chest damage:35,Arms damage:35,Legs damage:29,Recoil:Medium,Range:?,Mag:30(Pistol Bullet)</item>
+        <item>Nailgun,nailgun,weapon,Mode:Semi Auto,Head damage:36,Chest damage:18,Arms damage:12,Legs damage:8,Recoil:?,Range:Short,Mag:16(Nailgun nails)</item>
+        <item>Pump Shotgun,pump_shotgun,weapon,Mode:Pump Action,Head damage:280,Chest damage:210,Arms damage:80,Legs damage:80,Recoil:High,Range:10m,Mag:6(12 Gauge)</item>
+        <item>Python Revolver,python_revolver,weapon,Mode:Semi Auto,Head damage:110+22,Chest damage:55+11,Arms damage:55,Legs damage:45,Recoil:High,Range:?,Mag:6(Pistol Bullet)</item>
+        <item>Rocket Launcher,rocket_launcher,weapon,Mode:Single,Chest damage:350,Recoil:High,Range:250m,Mag:1(Rocket)</item>
+        <item>Salvaged Cleaver,salvaged_cleaver,weapon,Mode:Melee,Head damage:120,Chest damage:60+11,Arms damage:55,Legs damage:50,Range:1.5m</item>
         <item>Salvaged Sword,salvaged_sword,weapon,Mode:Melee,Head damage:100,Chest damage:50,Arms damage:50,Legs damage:45,Range:1.5m</item>
-        <item>Semi-Automatic Pistol,semi_automatic_pistol,weapon,Mode:Semi Auto,Head damage:80,Chest damage:40,Arms damage:40,Legs damage:30,Recoil:Medium,Range:Low,Capacity:10(Pistol Bullet)</item>
-        <item>Semi-Automatic Rifle,semi_automatic_rifle,weapon,Mode:Semi Auto,Head damage:80,Chest damage:40,Arms damage:40,Legs damage:30,Recoil:Medium,Range:150m,Capacity:16(5.56 Rifle Ammo)</item>
+        <item>Semi-Automatic Pistol,semi_automatic_pistol,weapon,Mode:Semi Auto,Head damage:80,Chest damage:40,Arms damage:40,Legs damage:30,Recoil:Medium,Range:Low,Mag:10(Pistol Bullet)</item>
+        <item>Semi-Automatic Rifle,semi_automatic_rifle,weapon,Mode:Semi Auto,Head damage:80,Chest damage:40,Arms damage:40,Legs damage:30,Recoil:Medium,Range:150m,Mag:16(5.56 Rifle Ammo)</item>
         <item>Stone Spear,stone_spear,weapon,Mode:Melee,Head damage:70,Chest damage:35,Arms damage:35,Legs damage:28,Range:2.2m</item>
-        <item>Thomson,thomson,weapon,Mode:Full Auto,Head damage:76+15bleed,Chest damage:38+8bleed,Arms damage:?,Legs damage:?,Recoil:Medium,Range:250m,Capacity:20(Pistol Bullet)</item>
-        <item>Waterpipe Shotgun,waterpipe_shotgun,weapon,Mode:Single,Head damage:210,Chest damage:180,Arms damage:75,Legs damage:75,Recoil:High,Range:Short,Capacity:1(12 Gauge)</item>
+        <item>Thompson,thompson,weapon,Mode:Full Auto,Head damage:76+15,Chest damage:38+8,Arms damage:?,Legs damage:?,Recoil:Medium,Range:250m,Mag:20(Pistol Bullet)</item>
+        <item>Waterpipe Shotgun,waterpipe_shotgun,weapon,Mode:Single,Head damage:210,Chest damage:180,Arms damage:75,Legs damage:75,Recoil:High,Range:Short,Mag:1(12 Gauge)</item>
         <item>Wooden Spear,wooden_spear,weapon,Mode:Melee,Head damage:30,Chest damage:25,Arms damage:25,Legs damage:13,Range:2.2m</item>
         <item>Bean Can Grenade,missing,weapon,Mode:Explosive,Chest damage:?</item>
-        <item>Assault Rifle,missing,weapon,Mode:?,Head damage:?,Chest damage:?,Arms damage:?,Legs damage:?,Recoil:?,Range:?,Capacity:?</item>
-        <item>L96 Rifle,missing,weapon,Mode:Semi Auto,Head damage:160,Chest damage:80,Arms damage:?,Legs damage:?,Recoil:?,Range:1km,Capacity:10(5.56 Rifle Ammo)</item>
+        <item>Assault Rifle,missing,weapon,Mode:?,Head damage:?,Chest damage:?,Arms damage:?,Legs damage:?,Recoil:?,Range:?,Mag:?</item>
+        <item>L96 Rifle,missing,weapon,Mode:Semi Auto,Head damage:160,Chest damage:80,Arms damage:?,Legs damage:?,Recoil:?,Range:1km,Mag:10(5.56 Rifle Ammo)</item>
         <item>Bone Club,bone_club,weapon,Mode:Melee,Head damage:26,Chest damage:11,Arms damage:8,Legs damage:5,Range:1.5m</item>
     </string-array>
     <string name="menu_weapons">Weapons</string>
@@ -80,4 +80,7 @@
     <string name="menu_news">Dev news</string>
     <string name="ads_url">https://play.google.com/store/apps/developer?id=Evgeny+T</string>
     <string name="news_url">https://evgenytblog.blogspot.com/</string>
+    <string name="text_selected">SELECTED</string>
+    <string name="text_equipped">EQUIPPED</string>
+    <string name="text_empty">EMPTY</string>
 </resources>

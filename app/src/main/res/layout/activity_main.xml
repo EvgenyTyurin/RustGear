@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/back"
     android:gravity="center"
-    android:paddingTop="8dp"
-    android:background="@drawable/back">
+    android:orientation="vertical"
+    android:paddingTop="8dp">
 
     <android.support.v7.widget.GridLayout
         android:layout_width="wrap_content"
@@ -23,8 +24,8 @@
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:background="?attr/colorControlHighlight"
-            android:textColor="@android:color/white"
-            android:text="HEAD" />
+            android:text="HEAD"
+            android:textColor="@android:color/white" />
 
         <ImageView
             android:id="@+id/imageFace"
@@ -37,8 +38,8 @@
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:background="?attr/colorControlHighlight"
-            android:textColor="@android:color/white"
-            android:text="FACE" />
+            android:text="FACE"
+            android:textColor="@android:color/white" />
 
         <ImageView
             android:id="@+id/imageChest"
@@ -51,8 +52,8 @@
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:background="?attr/colorControlHighlight"
-            android:textColor="@android:color/white"
-            android:text="CHEST" />
+            android:text="CHEST"
+            android:textColor="@android:color/white" />
 
         <ImageView
             android:id="@+id/imageGloves"
@@ -65,8 +66,8 @@
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:background="?attr/colorControlHighlight"
-            android:textColor="@android:color/white"
-            android:text="GLOVES" />
+            android:text="GLOVES"
+            android:textColor="@android:color/white" />
 
         <ImageView
             android:id="@+id/imageLegs"
@@ -79,8 +80,8 @@
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:background="?attr/colorControlHighlight"
-            android:textColor="@android:color/white"
-            android:text="LEGS" />
+            android:text="LEGS"
+            android:textColor="@android:color/white" />
 
         <ImageView
             android:id="@+id/imageFeet"
@@ -93,7 +94,17 @@
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:background="?attr/colorControlHighlight"
-            android:textColor="@android:color/white"
-            android:text="FEET" />
+            android:text="FEET"
+            android:textColor="@android:color/white" />
     </android.support.v7.widget.GridLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1997515044908390/2824071057">
+    </com.google.android.gms.ads.AdView>
 </LinearLayout>

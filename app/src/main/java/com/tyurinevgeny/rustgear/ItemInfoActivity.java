@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 public class ItemInfoActivity extends AppCompatActivity {
     private static final String EXTRA_SELECTED = "rust.selected";
+    private static final String EXTRA_EQUIPPED = "rust.equipped";
 
     /** Window init */
     @Override
@@ -23,13 +24,13 @@ public class ItemInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_item_info);
 
         Intent intent = getIntent();
-        String selectedItemName = intent.getStringExtra(EXTRA_SELECTED);
         // Selected item info
+        String selectedItemName = intent.getStringExtra(EXTRA_SELECTED);
         ImageView imageSelected = findViewById(R.id.selectedImage);
         imageSelected.setImageDrawable(GameData.getItemImage(selectedItemName));
         TextView viewSelectedName = findViewById(R.id.selectedName);
         viewSelectedName.setText(selectedItemName);
-        ClothItem selectedItem = GameData.getItem(selectedItemName);
+        RustItem selectedItem = GameData.getItem(selectedItemName);
         TextView textSelectedCold = findViewById(R.id.selectedCold);
         if (selectedItem.attrs.length > 0)
             textSelectedCold.setText(selectedItem.attrs[0]);
@@ -48,6 +49,45 @@ public class ItemInfoActivity extends AppCompatActivity {
         TextView textSelectedBite = findViewById(R.id.selectedBite);
         if (selectedItem.attrs.length > 5)
             textSelectedBite.setText(selectedItem.attrs[5]);
+        TextView textSelectedAttr6 = findViewById(R.id.selectedAttr6);
+        if (selectedItem.attrs.length > 6)
+            textSelectedAttr6.setText(selectedItem.attrs[6]);
+        TextView textSelectedAttr7 = findViewById(R.id.selectedAttr7);
+        if (selectedItem.attrs.length > 7)
+            textSelectedAttr7.setText(selectedItem.attrs[7]);
+        // Equipped item info
+        String equippedItemName = intent.getStringExtra(EXTRA_EQUIPPED);
+        RustItem equippedItem = GameData.getItem(equippedItemName);
+        if (equippedItem != null) {
+            ImageView imageEquipped = findViewById(R.id.equippedImage);
+            imageEquipped.setImageDrawable(GameData.getItemImage(equippedItemName));
+            TextView viewEquippedName = findViewById(R.id.equippedName);
+            viewEquippedName.setText(equippedItemName);
+            TextView textEquippedCold = findViewById(R.id.equippedCold);
+            if (equippedItem.attrs.length > 0)
+                textEquippedCold.setText(equippedItem.attrs[0]);
+            TextView textEquippedRad = findViewById(R.id.equippedRad);
+            if (equippedItem.attrs.length > 1)
+                textEquippedRad.setText(equippedItem.attrs[1]);
+            TextView textEquippedExpl = findViewById(R.id.equippedExplosion);
+            if (equippedItem.attrs.length > 2)
+                textEquippedExpl.setText(equippedItem.attrs[2]);
+            TextView textEquippedStab = findViewById(R.id.equippedStab);
+            if (equippedItem.attrs.length > 3)
+                textEquippedStab.setText(equippedItem.attrs[3]);
+            TextView textEquippedBullet = findViewById(R.id.equippedBullet);
+            if (equippedItem.attrs.length > 4)
+                textEquippedBullet.setText(equippedItem.attrs[4]);
+            TextView textEquippedBite = findViewById(R.id.equippedBite);
+            if (equippedItem.attrs.length > 5)
+                textEquippedBite.setText(equippedItem.attrs[5]);
+            TextView textEquippedAttr6 = findViewById(R.id.equippedAttr6);
+            if (equippedItem.attrs.length > 6)
+                textEquippedAttr6.setText(equippedItem.attrs[6]);
+            TextView textEquippedAttr7 = findViewById(R.id.equippedAttr7);
+            if (equippedItem.attrs.length > 7)
+                textEquippedAttr7.setText(equippedItem.attrs[7]);
+        }
         // Equip button
         Button buttonEquip = findViewById(R.id.buttonEquip);
         if (selectedItem.equals("")) {
@@ -71,6 +111,7 @@ public class ItemInfoActivity extends AppCompatActivity {
         Intent intent = new Intent(context, ItemInfoActivity.class);
         // todo put extras
         intent.putExtra(EXTRA_SELECTED, selected);
+        intent.putExtra(EXTRA_EQUIPPED, equipped);
         return intent;
     }
 }

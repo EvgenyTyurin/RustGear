@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/wolf_headdress"
+        android:icon="@drawable/bone_helmet"
+        android:roundIcon="@drawable/bone_helmet"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/wolf_headdress"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -19,6 +19,9 @@
         <activity android:name=".ItemsListActivity"/>
         <activity android:name=".ItemInfoActivity"/>
         <activity android:name=".WeaponsActivity"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1997515044908390~1047954950"/>
     </application>
 
 </manifest>
