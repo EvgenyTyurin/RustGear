@@ -2,45 +2,45 @@
     <string name="app_name">Rust Armory</string>
     <string-array name="items">
         <item>Baseball Cap,baseball_cap,head,Cold:+7%,Radiation:+1%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,No craft</item>
-        <item>Bone Helmet,bone_helmet,head,Cold:+0%,Radiation:+4%,Explosion:+7%,Stab:+40%,Bullet:+25%,Byte:+13%,Cloth x 15 Bone Fragments x 50</item>
-        <item>Bucket Helmet,bucket_helmet,head,Cold:+6%,Radiation:+4%,Explosion:+8%,Stab:+50%,Bullet:+20%,Byte:+8%,Metal Fragments x 35</item>
-        <item>Burlap Headwrap,burlap_headwrap,head,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+15%,Bullet:+15%,Byte:+3%,Cloth x 10</item>
-        <item>Candle Hat,candle_hat,head,Cold:+7%,Radiation:+1%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Cloth x 15 Low Grade Fuel x 1</item>
-        <item>Coffee Can Helmet,coffee_can_helmet,head,Cold:+0%,Radiation:+5%,Explosion:+8%,Stab:+50%,Bullet:+35%,Byte:+8%,Metal Fragments x 60 Cloth x 15 Sewing Kit x 1</item>
-        <item>Heavy Plate Helmet,heavy_plate_helmet,head,Cold:-17%,Radiation:+7%,Explosion:+8%,Stab:+80%,Bullet:+90%,Byte:+13%,SheetMetal x 2 High Quality Metal x 5</item>
-        <item>Improvised Balaclava,improvised_balaclava,head,Cold:+13%,Radiation:+3%,Explosion:+3%,Stab:+15%,Bullet:+15%,Byte:+3%,Cloth x 15</item>
-        <item>Metal Facemask,metal_facemask,head,Cold:+4%,Radiation:+0%,Explosion:+8%,Stab:+70%,Bullet:+50%,Byte:+8%,Leather x 50 High Quality Metal x 15 Sewing Kit x 6</item>
-        <item>Miners Hat,miners_hat,head,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+15%,Bullet:+15%,Byte:+3%,Cloth x 15 Low Grade Fuel x 10 Metal Fragments x 50</item>
-        <item>Riot Helmet,riot_helmet,head,Cold:+6%,Radiation:+5%,Explosion:+8%,Stab:+80%,Bullet:+25%,Byte:+13%,Cloth x 10 High Metal Fragments x 50</item>
-        <item>Wolf Headdress,wolf_headdress,head,Cold:+6%,Radiation:+4%,Explosion:+13%,Stab:+60%,Bullet:+30%,Byte:+10%,Cloth x 10 Wolf Scull x 1</item>
-        <item>Wood Armor Helmet,wood_armor_helmet,head,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+25%,Bullet:+15%,Byte:+3%,Cloth x 15 Wood x 200</item>
+        <item>Bone Helmet,bone_helmet,head,Cold:+0%,Radiation:+4%,Explosion:+7%,Stab:+40%,Bullet:+25%,Byte:+13%,Craft</item>
+        <item>Bucket Helmet,bucket_helmet,head,Cold:+6%,Radiation:+4%,Explosion:+8%,Stab:+50%,Bullet:+20%,Byte:+8%,Craft</item>
+        <item>Burlap Headwrap,burlap_headwrap,head,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+15%,Bullet:+15%,Byte:+3%,Craft</item>
+        <item>Candle Hat,candle_hat,head,Cold:+7%,Radiation:+1%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Craft</item>
+        <item>Coffee Can Helmet,coffee_can_helmet,head,Cold:+0%,Radiation:+5%,Explosion:+8%,Stab:+50%,Bullet:+35%,Byte:+8%,Craft</item>
+        <item>Heavy Plate Helmet,heavy_plate_helmet,head,Cold:-17%,Radiation:+7%,Explosion:+8%,Stab:+80%,Bullet:+90%,Byte:+13%,Craft</item>
+        <item>Improvised Balaclava,improvised_balaclava,head,Cold:+13%,Radiation:+3%,Explosion:+3%,Stab:+15%,Bullet:+15%,Byte:+3%,Craft</item>
+        <item>Metal Facemask,metal_facemask,head,Cold:+4%,Radiation:+0%,Explosion:+8%,Stab:+70%,Bullet:+50%,Byte:+8%,Craft</item>
+        <item>Miners Hat,miners_hat,head,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+15%,Bullet:+15%,Byte:+3%,Craft</item>
+        <item>Riot Helmet,riot_helmet,head,Cold:+6%,Radiation:+5%,Explosion:+8%,Stab:+80%,Bullet:+25%,Byte:+13%,Craft</item>
+        <item>Wolf Headdress,wolf_headdress,head,Cold:+6%,Radiation:+4%,Explosion:+13%,Stab:+60%,Bullet:+30%,Byte:+10%,Craft</item>
+        <item>Wood Armor Helmet,wood_armor_helmet,head,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+25%,Bullet:+15%,Byte:+3%,Craft</item>
         <item>Bandana Mask,bandana_mask,face,Cold:+10%,Radiation:+3%,Explosion:+0%,Stab:+10%,Bullet:+5%,Byte:+3%,No craft</item>
-        <item>Burlap Shirt,burlap_shirt,chest,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Cloth x 20</item>
-        <item>Heavy Plate Jacket,heavy_plate_jacket,chest,Cold:-17%,Radiation:+7%,Explosion:+12%,Stab:+70%,Bullet:+75%,Byte:+12%,Sheet Metal x 3 High Quality Metal x 8 Rope x 3</item>
-        <item>Hide Halterneck,hide_halterneck,chest,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Cloth x 20</item>
-        <item>Hide Poncho,hide_poncho,chest,Cold:+8%,Radiation:+5%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+5%,Cloth x 50</item>
-        <item>Hide Vest,hide_vest,chest,Cold:+5%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+8%,Cloth x 50</item>
-        <item>Hoodie,hoodie,chest,Cold:+8%,Radiation:+5%,Explosion:+0%,Stab:+15%,Bullet:+15%,Byte:+6%,Cloth x 80 Sewing Kit x 1</item>
-        <item>Jacket,jacket,chest,Cold:+10%,Radiation:+5%,Explosion:+0%,Stab:+20%,Bullet:+15%,Byte:+7%,Cloth x 50 Sewing Kit x 2</item>
-        <item>Longsleeve T-Shirt,longsleeve_t_shirt,chest,Cold:+4%,Radiation:+3%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+4%,Cloth x 35</item>
-        <item>Metal Chest Plate,metal_chest_plate,chest,Cold:-8%,Radiation:+0%,Explosion:+0%,Stab:+20%,Bullet:+25%,Byte:+3%,Leather x 50 High Quality Metal x 25 Sewing Kit x 8</item>
-        <item>Shirt,shirt,chest,Cold:+5%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+8%,Cloth x 50</item>
-        <item>Snow Jacket,snow_jacket,chest,Cold:+17%,Radiation:+20%,Explosion:+0%,Stab:+20%,Bullet:+20%,Byte:+5%,Cloth x 60 Sewing Kit x 1</item>
-        <item>T-Shirt,t_shirt,chest,Cold:+4%,Radiation:+3%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+4%,Cloth x 30</item>
-        <item>Tank Top,tank_top,chest,Cold:+5%,Radiation:+2%,Explosion:+0%,Stab:+5%,Bullet:+5%,Byte:+3%,Cloth x 30</item>
-        <item>Burlap Trousers,burlap_trousers,legs,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Cloth x 20</item>
-        <item>Heavy Plate Pants,heavy_plate_pants,legs,Cold:-17%,Radiation:+7%,Explosion:+12%,Stab:+70%,Bullet:+75%,Byte:+12%,Sheet Metal x 2 High Quality Metal x 4 Rope x 2</item>
-        <item>Hide Pants,hide_pants,legs,Cold:+4%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+8%,Cloth x 45</item>
-        <item>Hide Skirt,hide_skirt,legs,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Cloth x 20</item>
-        <item>Pants,pants,legs,Cold:+8%,Radiation:+5%,Explosion:+0%,Stab:+15%,Bullet:+15%,Byte:+3%,Cloth x 80 Sewing Kit x 1</item>
-        <item>Road Sign Kilt,road_sign_kilt,legs,Cold:-8%,Radiation:+0%,Explosion:+0%,Stab:+25%,Bullet:+20%,Byte:+10%,Leather x 20 Road Signs x 1 Sewing Kit x 2</item>
-        <item>Shorts,shorts,legs,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Cloth x 30</item>
-        <item>Wood Armor Pants,wood_armor_pants,legs,Cold:+0%,Radiation:+5%,Explosion:+5%,Stab:+40%,Bullet:+10%,Byte:+5%,Wood x 200 Rope x 1</item>
-        <item>Boots,boots,feet,Cold:+8%,Radiation:+3%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Leather x 20 Road Signs x 1 Sewing Kit x 1 Metal Fragments x 15</item>
-        <item>Burlap Shoes,burlap_shoes,feet,Cold:+3%,Radiation:+2%,Explosion:+0%,Stab:+5%,Bullet:+5%,Byte:+2%,Cloth x 10</item>
-        <item>Hide Boots,hide_boots,feet,Cold:+5%,Radiation:+2%,Explosion:+0%,Stab:+5%,Bullet:+5%,Byte:+3%,Leather x 10</item>
-        <item>Frog Boots,frog_boots,feet,Cold:+8%,Radiation:+5%,Explosion:+0%,Stab:+0%,Bullet:+0%,Byte:+0%,Tarp x 1</item>
-        <item>Leather Gloves,leather_gloves,gloves,Cold:+3%,Radiation:+2%,Explosion:+0%,Stab:+5%,Bullet:+5%,Byte:+2%,Leather x 20 Sewing Kit x 1</item>
+        <item>Burlap Shirt,burlap_shirt,chest,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Craft</item>
+        <item>Heavy Plate Jacket,heavy_plate_jacket,chest,Cold:-17%,Radiation:+7%,Explosion:+12%,Stab:+70%,Bullet:+75%,Craft</item>
+        <item>Hide Halterneck,hide_halterneck,chest,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Craft</item>
+        <item>Hide Poncho,hide_poncho,chest,Cold:+8%,Radiation:+5%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+5%,Craft</item>
+        <item>Hide Vest,hide_vest,chest,Cold:+5%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+8%,Craft</item>
+        <item>Hoodie,hoodie,chest,Cold:+8%,Radiation:+5%,Explosion:+0%,Stab:+15%,Bullet:+15%,Byte:+6%,Craft</item>
+        <item>Jacket,jacket,chest,Cold:+10%,Radiation:+5%,Explosion:+0%,Stab:+20%,Bullet:+15%,Byte:+7%,Craft</item>
+        <item>Longsleeve T-Shirt,longsleeve_t_shirt,chest,Cold:+4%,Radiation:+3%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+4%,Craft</item>
+        <item>Metal Chest Plate,metal_chest_plate,chest,Cold:-8%,Radiation:+0%,Explosion:+0%,Stab:+20%,Bullet:+25%,Byte:+3%,Craft</item>
+        <item>Shirt,shirt,chest,Cold:+5%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+8%,Craft</item>
+        <item>Snow Jacket,snow_jacket,chest,Cold:+17%,Radiation:+20%,Explosion:+0%,Stab:+20%,Bullet:+20%,Byte:+5%,Craft</item>
+        <item>T-Shirt,t_shirt,chest,Cold:+4%,Radiation:+3%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+4%,Craft</item>
+        <item>Tank Top,tank_top,chest,Cold:+5%,Radiation:+2%,Explosion:+0%,Stab:+5%,Bullet:+5%,Byte:+3%,Craft</item>
+        <item>Burlap Trousers,burlap_trousers,legs,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Craft</item>
+        <item>Heavy Plate Pants,heavy_plate_pants,legs,Cold:-17%,Radiation:+7%,Explosion:+12%,Stab:+70%,Bullet:+75%,Byte:+12%,Craft</item>
+        <item>Hide Pants,hide_pants,legs,Cold:+4%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+8%,Craft</item>
+        <item>Hide Skirt,hide_skirt,legs,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Craft</item>
+        <item>Pants,pants,legs,Cold:+8%,Radiation:+5%,Explosion:+0%,Stab:+15%,Bullet:+15%,Byte:+3%,Craft</item>
+        <item>Road Sign Kilt,road_sign_kilt,legs,Cold:-8%,Radiation:+0%,Explosion:+0%,Stab:+25%,Bullet:+20%,Byte:+10%,Craft</item>
+        <item>Shorts,shorts,legs,Cold:+7%,Radiation:+2%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Craft</item>
+        <item>Wood Armor Pants,wood_armor_pants,legs,Cold:+0%,Radiation:+5%,Explosion:+5%,Stab:+40%,Bullet:+10%,Byte:+5%,Craft</item>
+        <item>Boots,boots,feet,Cold:+8%,Radiation:+3%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,Craft</item>
+        <item>Burlap Shoes,burlap_shoes,feet,Cold:+3%,Radiation:+2%,Explosion:+0%,Stab:+5%,Bullet:+5%,Byte:+2%,Craft</item>
+        <item>Hide Boots,hide_boots,feet,Cold:+5%,Radiation:+2%,Explosion:+0%,Stab:+5%,Bullet:+5%,Byte:+3%,Craft</item>
+        <item>Frog Boots,frog_boots,feet,Cold:+8%,Radiation:+5%,Explosion:+0%,Stab:+0%,Bullet:+0%,Byte:+0%,Craft</item>
+        <item>Leather Gloves,leather_gloves,gloves,Cold:+3%,Radiation:+2%,Explosion:+0%,Stab:+5%,Bullet:+5%,Byte:+2%,Craft</item>
         <item>Bolt Action Rifle,bolt_action_rifle,weapon,Mode:Single Fire,Head damage:150+30,Chest damage:75+15,Arms damage:50,Legs damage:45,Recoil:Severe,Range:350-500m,Capacity:4(5.56 Rifle Ammo)</item>
         <item>Bone Knife,bone_knife,weapon,Mode:Melee,Head damage:35,Chest damage:17,Arms damage:17,Legs damage:15,Range:1.5m</item>
         <item>Crossbow,crossbow,weapon,Mode:Single Fire,Head damage:102-121+34,Chest damage:60+12,Arms damage:45,Legs damage:45,Recoil:Low,Range:250m,Capacity:1(Arrow)</item>
@@ -58,6 +58,21 @@
         <item>Machete,machete,weapon,Mode:Melee,Head damage:70,Chest damage:35,Arms damage:35,Legs damage:29,Range:1.5m</item>
         <item>MP5A4,mp5a4,weapon,Mode:Full Auto,Head damage:70,Chest damage:35,Arms damage:35,Legs damage:29,Recoil:Medium,Range:?,Capacity:30(Pistol Bullet)</item>
         <item>Nailgun,nailgun,weapon,Mode:Semi Auto,Head damage:36,Chest damage:18,Arms damage:12,Legs damage:8,Recoil:?,Range:Short,Capacity:16(Nailgun nails)</item>
+        <item>Pump Shotgun,pump_shotgun,weapon,Mode:Pump Action,Head damage:280,Chest damage:210,Arms damage:80,Legs damage:80,Recoil:High,Range:10m,Capacity:6(12 Gauge)</item>
+        <item>Python Revolver,python_revolver,weapon,Mode:Semi Auto,Head damage:110+22bleed,Chest damage:55+11bleed,Arms damage:55,Legs damage:45,Recoil:High,Range:?,Capacity:6(Pistol Bullet)</item>
+        <item>Rocket Launcher,rocket_launcher,weapon,Mode:Single,Chest damage:350,Recoil:High,Range:250m,Capacity:1(Rocket)</item>
+        <item>Salvaged Cleaver,salvaged_cleaver,weapon,Mode:Melee,Head damage:120,Chest damage:60+11bleed,Arms damage:55,Legs damage:50,Range:1.5m</item>
+        <item>Salvaged Sword,salvaged_sword,weapon,Mode:Melee,Head damage:100,Chest damage:50,Arms damage:50,Legs damage:45,Range:1.5m</item>
+        <item>Semi-Automatic Pistol,semi_automatic_pistol,weapon,Mode:Semi Auto,Head damage:80,Chest damage:40,Arms damage:40,Legs damage:30,Recoil:Medium,Range:Low,Capacity:10(Pistol Bullet)</item>
+        <item>Semi-Automatic Rifle,semi_automatic_rifle,weapon,Mode:Semi Auto,Head damage:80,Chest damage:40,Arms damage:40,Legs damage:30,Recoil:Medium,Range:150m,Capacity:16(5.56 Rifle Ammo)</item>
+        <item>Stone Spear,stone_spear,weapon,Mode:Melee,Head damage:70,Chest damage:35,Arms damage:35,Legs damage:28,Range:2.2m</item>
+        <item>Thomson,thomson,weapon,Mode:Full Auto,Head damage:76+15bleed,Chest damage:38+8bleed,Arms damage:?,Legs damage:?,Recoil:Medium,Range:250m,Capacity:20(Pistol Bullet)</item>
+        <item>Waterpipe Shotgun,waterpipe_shotgun,weapon,Mode:Single,Head damage:210,Chest damage:180,Arms damage:75,Legs damage:75,Recoil:High,Range:Short,Capacity:1(12 Gauge)</item>
+        <item>Wooden Spear,wooden_spear,weapon,Mode:Melee,Head damage:30,Chest damage:25,Arms damage:25,Legs damage:13,Range:2.2m</item>
+        <item>Bean Can Grenade,missing,weapon,Mode:Explosive,Chest damage:?</item>
+        <item>Assault Rifle,missing,weapon,Mode:?,Head damage:?,Chest damage:?,Arms damage:?,Legs damage:?,Recoil:?,Range:?,Capacity:?</item>
+        <item>L96 Rifle,missing,weapon,Mode:Semi Auto,Head damage:160,Chest damage:80,Arms damage:?,Legs damage:?,Recoil:?,Range:1km,Capacity:10(5.56 Rifle Ammo)</item>
+        <item>Bone Club,bone_club,weapon,Mode:Melee,Head damage:26,Chest damage:11,Arms damage:8,Legs damage:5,Range:1.5m</item>
     </string-array>
     <string name="menu_weapons">Weapons</string>
     <string name="menu_die">R.I.P.</string>
