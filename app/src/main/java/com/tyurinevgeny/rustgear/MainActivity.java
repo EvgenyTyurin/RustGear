@@ -3,8 +3,8 @@ package com.tyurinevgeny.rustgear;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,9 +13,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.tyurinevgeny.rustgear.my_ads.MyAds;
 
 /**
  * Rust Gear Assistant: Main window with character gear
@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
     private ImageView feetImage;
     private Button glovesButton;
     private ImageView glovesImage;
-    private AdView mAdView;
 
     /** Window init */
     @Override
@@ -59,9 +58,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // Google ads init
         MobileAds.initialize(this, "ca-app-pub-1997515044908390~1047954950");
-        mAdView = findViewById(R.id.adView1);
+        AdView mAdView = findViewById(R.id.adView1);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        // My ads data init
+        MyAds.getInstance(this);
         // Load game data
         GameData.init(this);
         // Head slot init

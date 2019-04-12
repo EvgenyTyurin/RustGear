@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class WeaponsActivity extends AppCompatActivity {
     // Weapon slots
     private static final int REQUEST_CODE_PRIMARY_WEAPON = 1;
@@ -29,6 +33,11 @@ public class WeaponsActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weapons);
+        // Google ads init
+        MobileAds.initialize(this, "ca-app-pub-1997515044908390~1047954950");
+        AdView mAdView = findViewById(R.id.adViewWeapons);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         // Primary weapon slot init
         pweaponButton = findViewById(R.id.buttonWeaponPrimary);
         pweaponButton.setOnClickListener(new View.OnClickListener() {

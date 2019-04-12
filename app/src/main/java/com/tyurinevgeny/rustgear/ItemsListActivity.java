@@ -15,6 +15,10 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 /**
  * Window with list of items
  */
@@ -31,6 +35,11 @@ public class ItemsListActivity extends ListActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itemslist);
+        // Google ads init
+        MobileAds.initialize(this, "ca-app-pub-1997515044908390~1047954950");
+        AdView mAdView = findViewById(R.id.adViewList);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         // Equipped item info
         String item = getIntent().getStringExtra(EXTRA_EQUIPPED);
         ImageView imgEquipped = findViewById(R.id.imageViewEquipped);

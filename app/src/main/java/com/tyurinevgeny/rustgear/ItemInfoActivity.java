@@ -2,12 +2,17 @@ package com.tyurinevgeny.rustgear;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.tyurinevgeny.rustgear.my_ads.MyAds;
+import com.tyurinevgeny.rustgear.my_ads.MyProduct;
 
 /**
  * Window with selected and equipped items info
@@ -22,9 +27,22 @@ public class ItemInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_info);
-
-        Intent intent = getIntent();
+        // My ads init
+        final MyProduct myProduct = MyAds.getInstance(this).getRandomAds();
+        if (myProduct != null) {
+            ImageButton btnMyAds = findViewById(R.id.buttonMyAds);
+            btnMyAds.setImageDrawable(GameData.getImgByName(myProduct.getImg()));
+            btnMyAds.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(myProduct.getUrl()));
+                    startActivity(i);
+                }
+            });
+        }
         // Selected item info
+        Intent intent = getIntent();
         String selectedItemName = intent.getStringExtra(EXTRA_SELECTED);
         ImageView imageSelected = findViewById(R.id.selectedImage);
         imageSelected.setImageDrawable(GameData.getItemImage(selectedItemName));

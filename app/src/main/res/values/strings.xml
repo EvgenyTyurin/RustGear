@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Rust Armory</string>
+    <string-array name="my_adds">
+        <item>ads_dayz,https://play.google.com/store/apps/details?id=com.turinevgeny.dayzgear</item>
+        <item>ads_snowcrush,https://play.google.com/store/apps/details?id=com.evgenyt.snowgame</item>
+    </string-array>
     <string-array name="items">
         <item>Baseball Cap,baseball_cap,head,Cold:+7%,Radiation:+1%,Explosion:+0%,Stab:+10%,Bullet:+10%,Byte:+3%,No craft</item>
         <item>Bone Helmet,bone_helmet,head,Cold:+0%,Radiation:+4%,Explosion:+7%,Stab:+40%,Bullet:+25%,Byte:+13%,Craft</item>

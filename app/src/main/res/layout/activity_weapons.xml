@@ -2,14 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
     android:gravity="center"
-    android:paddingTop="8dp"
-    android:background="@drawable/back">
+    android:orientation="vertical"
+    android:paddingTop="8dp">
 
     <android.support.v7.widget.GridLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         app:columnCount="2">
 
         <ImageView
@@ -23,8 +25,8 @@
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:background="?attr/colorControlHighlight"
-            android:textColor="@android:color/white"
-            android:text="PRIMARY WEAPON" />
+            android:text="PRIMARY WEAPON"
+            android:textColor="@android:color/white" />
 
         <ImageView
             android:id="@+id/imageWeaponSecondary"
@@ -37,8 +39,8 @@
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:background="?attr/colorControlHighlight"
-            android:textColor="@android:color/white"
-            android:text="SECONDARY WEAPON" />
+            android:text="SECONDARY WEAPON"
+            android:textColor="@android:color/white" />
 
         <ImageView
             android:id="@+id/imageWeaponBackup"
@@ -51,8 +53,18 @@
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:background="?attr/colorControlHighlight"
-            android:textColor="@android:color/white"
-            android:text="BACKUP WEAPON" />
+            android:text="BACKUP WEAPON"
+            android:textColor="@android:color/white" />
 
     </android.support.v7.widget.GridLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewWeapons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1997515044908390/3629654751">
+    </com.google.android.gms.ads.AdView>
 </LinearLayout>

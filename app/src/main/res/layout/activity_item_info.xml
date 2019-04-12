@@ -212,4 +212,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="EQUIP" />
+
+    <ImageButton
+        android:id="@+id/buttonMyAds"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

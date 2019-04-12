@@ -53,7 +53,7 @@ class GameData {
     }
 
     /** Returns image drawable object by image name */
-    static private Drawable getImgByName(String imgName) {
+    static Drawable getImgByName(String imgName) {
         if (imgName.equals("")) {
             String uri = "@android:drawable/list_selector_background";
             int imageResource = activity.getResources().getIdentifier(uri, null,
